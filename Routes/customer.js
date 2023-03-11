@@ -131,7 +131,7 @@ customerRoutes.put('/customer/edit', (req, res) => {
 
         let arr = []
         if (notSelectedCustomer.length > 0) {
-            arr.push(notSelectedCustomer)
+            arr = notSelectedCustomer
         }
 
         arr.push(existCustomer)
