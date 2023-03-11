@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "5aa8ff8c-9b2c-4be8-adf9-c07a11923ac5",
+		"name": "Customer Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2716729"
+	},
+	"item": [
+		{
+			"name": "Customer List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/customer/detail?id=7q8bbobxku",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7q8bbobxku"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"id\": \"7q8bbobxku\",\r\n        \"personalData\": {\r\n            \"email\": \"m.junaidi@gmail.com.my\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/edit?id=7q8bbobxku",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7q8bbobxku"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"personalData\": {\r\n            \"title\": \"Mrs\",\r\n            \"fullname\": \"Nur Nurhanna binti Saharil\",\r\n            \"gender\": \"F\",\r\n            \"identificationNo\": \"980204109466\",\r\n            \"email\": \"Nurhanna@gmail.com\",\r\n            \"phoneNo\": \"017 935 8425\",\r\n            \"address\": \"3, Jln 1Q, Taman Raya, 07332 Changlun, Kedah Darul Aman\",\r\n            \"image\": \"data:image/jpeg;base64,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\"\r\n        },\r\n        \"maritalData\": {\r\n            \"married\": true,\r\n            \"name\": \"Nik Nazrin bin Suzaman\",\r\n            \"dob\": \"17-08-1995\",\r\n            \"noChild\": 0\r\n        },\r\n        \"emergencyContact\": {\r\n            \"name\": \"Saharil bin Samad\",\r\n            \"phoneNo\": \"015 933 7974\"\r\n        },\r\n        \"id\": \"tibjuppi49\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7q8bbobxku1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"personalData\": {\r\n            \"title\": \"Mr\",\r\n            \"fullname\": \"Mohamad Junaidi Bin Bakar\",\r\n            \"gender\": \"M\",\r\n            \"identificationNo\": \"900425055481\",\r\n            \"email\": \"m.junaidi@gmail.com.my\",\r\n            \"phoneNo\": \"0179298152\",\r\n            \"address\": \"E-36-21, Jalan Davis 1/3, Sri Bendahara, 24012 Pasir Raja, Terengganu \",\r\n            \"image\": \"\"\r\n        },\r\n        \"maritalData\": {\r\n            \"married\": true,\r\n            \"name\": \"Sabrina Ahwali binti Wan Zolkafeli\",\r\n            \"dob\": \"02-01-1990\",\r\n            \"noChild\": 2\r\n        },\r\n        \"emergencyContact\": {\r\n            \"name\": \"Sabrina Ahwali binti Wan Zolkafeli\",\r\n            \"phoneNo\": \"0182715957\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/customer/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
